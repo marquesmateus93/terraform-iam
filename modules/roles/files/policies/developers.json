@@ -1,0 +1,58 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCodeCommit",
+      "Effect": "Allow",
+      "Action": [
+        "codecommit:*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "DenyCodeCommit",
+      "Effect": "Deny",
+      "Action": [
+        "codecommit:DeleteRepository"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "CodeBuild",
+      "Effect": "Allow",
+      "Action": [
+        "codebuild:List*",
+        "codebuild:Get*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "CodePipeline",
+      "Effect": "Allow",
+      "Action": [
+        "codepipeline:List*",
+        "codepipeline:Get*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    },
+    {
+      "Sid": "EKS",
+      "Effect": "Allow",
+      "Action": [
+        "eks:List*",
+        "eks:Describe*"
+      ],
+      "Resource": [
+        "*"
+      ]
+    }
+  ]
+}
